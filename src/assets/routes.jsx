@@ -8,8 +8,9 @@ import {
 } from "react-router-dom";
 
 import Home from "./pages/home";
-import Notes from "./pages/notes";
-import Shop from "./pages/shop";
+import About from "./pages/about";
+import Header from "./pages/header";
+import Dashboard from "./pages/dashboard";
 
 const MyRoutes = () => {
   return (
@@ -22,18 +23,22 @@ const MyRoutes = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/notes">Notes</Link>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/shop">Shop</Link>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+            <li>
+              <Link to="/header">Header</Link>
             </li>
           </ul>
         </nav>
 
         <ReactRoutes>
           <Route path="/" element={<Home />} />
-          <Route path="/notes" element={<Notes />} />
-          <Route path="/shop" element={<Shop />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/header" element={<Header />} />
         </ReactRoutes>
       </div>
     </Router>
